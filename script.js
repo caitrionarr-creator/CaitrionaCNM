@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
+    const routeMap = {
+        "Clinical Governance": "clinical-governance.html",
+        "Operational Management": "operational-management.html",
+        "Quality Improvement": "quality-improvement.html",
+        "Resource & Financial Control": "resource-control.html",
+        "Strategic Development": "strategic-development.html",
+        "Leadership": "leadership.html",
+        "Patient Safety": "patient-safety.html"
+    };
+
     boxes.forEach(box => {
         // Initial state for animation
         if (window.innerWidth > 900) {
@@ -26,18 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add click interaction
         box.addEventListener('click', () => {
-            const title = box.querySelector('h2').innerText;
-            // For now, just a visual feedback or alert. 
-            // In a full app, this would navigate to a new page or open a modal.
+            const title = box.querySelector('h2').innerText.trim();
             
             // Create a ripple effect
             box.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 box.style.transform = '';
+                if (routeMap[title]) {
+                    window.location.href = routeMap[title];
+                }
             }, 150);
-            
-            console.log(`Clicked on ${title}`);
-            // alert(`Navigating to section: ${title}`);
         });
     });
 });
