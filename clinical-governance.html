@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Governance - Cath Lab Leadership</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .page-content h1 {
+            color: var(--highlight);
+            margin-bottom: 1rem;
+        }
+        .page-content h3 {
+            color: #fff;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        .page-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #e0e1dd;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--highlight);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: var(--highlight);
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container" style="justify-content: center; min-height: 100vh;">
+        <div class="page-content">
+            <h1>Clinical Governance</h1>
+            <h3>Ensuring standards of care and continuous improvement.</h3>
+            <p>Clinical governance is the framework through which healthcare organizations are accountable for continuously improving the quality of their services and safeguarding high standards of care. In the Cath Lab, this involves rigorous clinical audits, evidence-based practice implementation, risk management, and fostering an environment of continuous learning and accountability.</p>
+            <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>
